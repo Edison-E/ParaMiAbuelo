@@ -2,12 +2,15 @@ var contraseñaIngre = '';
 var contraseñaOriginal = codificar('edison');
 while (true) {
     contraseñaIngre = prompt("ingresa contraseña para ver el contenido !!!");
-    var contraseñaIngressada = codificar(contraseñaIngre);
-
-    if (contraseñaOriginal == contraseñaIngressada) {
-        break;
+    if (contraseñaIngre == null) {
+        alert("Ingresa la contraseña, no canceles !!!");
     } else {
-        alert("CONTRASEÑA INCORRECTA !!!")
+        var contraseñaIngressada = codificar(contraseñaIngre);
+        if (contraseñaOriginal == contraseñaIngressada) {
+            break;
+        } else {
+            alert("CONTRASEÑA INCORRECTA !!!")
+        }
     }
 }
 
